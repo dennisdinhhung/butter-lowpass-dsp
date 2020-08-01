@@ -6,7 +6,6 @@ from scipy import signal
 from matplotlib import pyplot as plt
 
 (freq, sample) = read('input.wav')
-len(sample)
 
 plt.subplot(221)
 plt.plot(sample)
@@ -14,7 +13,7 @@ plt.title('input.wav')
 plt.xlabel('Hz')
 plt.ylabel('Amplitude')
 
-fourier = sp.fft(sample)
+fourier = sp.fft.fft(sample)
 scale = np.linspace(0, freq, len(sample))
 
 plt.subplot(222)
